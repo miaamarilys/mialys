@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API del proyecto",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --ignore uploads src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
