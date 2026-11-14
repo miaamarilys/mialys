@@ -5,11 +5,5 @@ dist/
 *.log
 .DS_Store
 .vercel
-Frontend/node_modules/
-Frontend/dist/
-Frontend/.vercel
-Frontend/deploy-*.txt
-Frontend/mialys-skin.zip
-Backend/node_modules/
-Backend/uploads/*
-!Backend/uploads/.gitkeep
+deploy-*.txt
+*.zip
