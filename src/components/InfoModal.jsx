@@ -257,11 +257,6 @@ function Business({ onClose }) {
           </div>
         </div>
       </div>
-      {error && (
-        <p className="field-error info-error" role="alert">
-          {error}
-        </p>
-      )}
       <button type="button" className="info-cta" onClick={onClose}>
         Cerrar
       </button>
