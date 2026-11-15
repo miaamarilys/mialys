@@ -1,7 +1,6 @@
 import {
   LeafIcon,
   HeartIcon,
-  SparklesIcon,
   WhatsAppIcon,
   ShieldIcon,
   TruckIcon,
@@ -11,83 +10,69 @@ import { whatsappLink } from "../data/products.js";
 
 export default function About({ onClose }) {
   return (
-    <div className="about-grid">
-      <div className="about-hero-col">
-        <span className="about-badge">
-          <SparklesIcon size={14} /> Filosofía &amp; Esencia
-        </span>
-        <h2 className="about-title">Cuidado lento, fórmulas honestas.</h2>
+    <div className="about-grid-clean">
+      <div className="about-left-col">
+        <p className="eyebrow">Sobre Nosotros</p>
+        <h2 className="about-clean-title">Cuidado lento, fórmulas honestas.</h2>
 
-        <div className="about-quote-card">
-          <p>
-            &ldquo;La belleza consciente nace de escuchar a tu piel y brindarle texturas
-            que reconozca, sin pasos innecesarios.&rdquo;
-          </p>
-        </div>
+        <p className="about-statement">
+          &ldquo;La piel no necesita diez pasos, necesita texturas botánicas que reconozca y nutran su barrera natural.&rdquo;
+        </p>
 
-        <div className="about-stats-row">
-          <div className="about-stat-item">
-            <ShieldIcon size={15} />
-            <span>100% Original</span>
-          </div>
-          <div className="about-stat-item">
-            <HeartIcon size={15} />
-            <span>Cruelty-Free</span>
-          </div>
-          <div className="about-stat-item">
-            <TruckIcon size={15} />
-            <span>Envíos Ecuador</span>
-          </div>
+        <div className="about-inline-hallmarks">
+          <span>
+            <ShieldIcon size={14} /> 100% Original
+          </span>
+          <span className="hallmark-sep">•</span>
+          <span>
+            <HeartIcon size={14} /> Cruelty-Free
+          </span>
+          <span className="hallmark-sep">•</span>
+          <span>
+            <TruckIcon size={14} /> Envíos a todo Ecuador
+          </span>
         </div>
       </div>
 
-      <div className="about-copy">
-        <p className="about-lead">
+      <div className="about-right-col">
+        <p className="about-text-lead">
           Mialys Skin nace de una idea sencilla: la piel no necesita diez pasos, necesita
           texturas que reconozca. Formulamos cremas, bálsamos y leches limpiadoras en
           lotes pequeños, con ingredientes botánicos y sin pruebas en animales.
         </p>
-        <p className="about-subtext">
+        <p className="about-text-sub">
           Cada producto indica el tipo de piel para el que fue pensado. Si tu piel cambia
           con el clima o el día, el catálogo está ordenado para que elijas sin adivinar.
         </p>
 
-        <div className="about-cards-list">
-          <div className="about-card-item">
-            <div className="about-icon-box">
-              <StoreIcon size={18} />
+        <ul className="about-editorial-points">
+          <li>
+            <StoreIcon size={17} className="editorial-ico" />
+            <div>
+              <strong>La marca:</strong>{" "}
+              <span>Rituales de rostro con envíos seguros a todo el país.</span>
             </div>
-            <div className="about-card-text">
-              <strong>La marca</strong>
-              <span>Rituales de belleza y cuidado facial con envíos seguros a todo el país.</span>
+          </li>
+          <li>
+            <LeafIcon size={17} className="editorial-ico" />
+            <div>
+              <strong>La fórmula:</strong>{" "}
+              <span>Botánica, cruelty-free y revisada para el uso diario.</span>
             </div>
-          </div>
-
-          <div className="about-card-item">
-            <div className="about-icon-box">
-              <LeafIcon size={18} />
-            </div>
-            <div className="about-card-text">
-              <strong>La fórmula</strong>
-              <span>Botánica, cruelty-free y revisada rigurosamente para el uso diario.</span>
-            </div>
-          </div>
-
-          <div className="about-card-item">
-            <div className="about-icon-box is-green">
-              <WhatsAppIcon size={18} />
-            </div>
-            <div className="about-card-text">
-              <strong>La atención</strong>
+          </li>
+          <li>
+            <WhatsAppIcon size={17} className="editorial-ico is-wa" />
+            <div>
+              <strong>La atención:</strong>{" "}
               <span>Te orientamos por el formulario o directo por WhatsApp.</span>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
 
-        <div className="about-actions-row">
+        <div className="about-clean-actions">
           <a
-            className="btn btn-about-whatsapp"
-            href={whatsappLink("Hola Mialys Skin, leí sobre su marca y me gustaría recibir asesoría personalizada.")}
+            className="btn btn-about-wa"
+            href={whatsappLink("Hola Mialys Skin, leí sobre su marca y me gustaría asesoría.")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -95,7 +80,7 @@ export default function About({ onClose }) {
             <span>Asesoría por WhatsApp</span>
           </a>
           {onClose && (
-            <button type="button" className="btn btn-about-close" onClick={onClose}>
+            <button type="button" className="btn-about-dismiss" onClick={onClose}>
               Cerrar
             </button>
           )}
