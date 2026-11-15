@@ -212,7 +212,7 @@ export default function InfoModal({ type, onClose, cart = [] }) {
         {type === "pagos" && <Payments cart={cart} />}
         {type === "envios" && <Shipping onClose={onClose} />}
         {type === "faq" && <Faq onClose={onClose} />}
-        {type === "nosotros" && <About />}
+        {type === "nosotros" && <About onClose={onClose} />}
       </div>
     </div>
   );
